@@ -1,20 +1,15 @@
 ---
+import SectionHeading from "./SectionHeading.astro";
 import { getNewsItems } from "../lib/content";
 
-const newsItems = await getNewsItems();
-const homepageNews = newsItems.slice(0, 3);
+const homepageNews = (await getNewsItems()).slice(0, 3);
 ---
 
-<section aria-labelledby="news-title" class="section news" id="news">
-  <div class="container">
-    <div class="section-header">
-      <div><h2 id="news-title">News</h2></div>
-      <a class="more" href="/news/">All news</a>
-    </div>
-    <div class="news-row">
-      {homepageNews.map((item) => (
-        <article class="news-item"><time datetime={item.date}>{item.displayDate}</time><h3>{item.title}</h3><p>{item.summary}</p></article>
-      ))}
-    </div>
+<section aria-labelledby="news-title" class="manual-section" id="news">
+  <SectionHeading id="news-title" title="News" page="05" link={{ href: "/news/", label: "All news" }} />
+  <div class="news-cards">
+    {homepageNews.map((item) => (
+      <article class="news-card notch"><time datetime={item.date}>{item.displayDate}</time><h3>{item.title}</h3><p>{item.summary}</p></article>
+    ))}
   </div>
 </section>

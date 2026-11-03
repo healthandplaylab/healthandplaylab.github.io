@@ -1,29 +1,23 @@
 ---
 import AreaMarker from "./AreaMarker.astro";
+import SectionHeading from "./SectionHeading.astro";
 import { getProjects, getResearchAreas } from "../lib/content";
 
-interface Props {
-  showMoreLink?: boolean;
-}
-const { showMoreLink = true } = Astro.props;
 const projects = (await getProjects()).filter((project) => project.featured);
 const areas = await getResearchAreas();
 const markerFor = (id: string) => areas.find((area) => area.id === id)?.marker ?? "filled";
+const bandText = (project: (typeof projects)[number]) =>
+  [project.years, project.funding?.funder === "National Science Foundation" ? "NSF" : null].filter(Boolean).join(" · ") || project.label;
 ---
 
-<section aria-labelledby="work-title" class="section work-section" id="projects">
-  <div class="container">
-    <div class="section-header">
-      <div><h2 id="work-title">Current projects and studies</h2></div>
-      {showMoreLink && <a class="more" href="/research/">All research</a>}
-    </div>
-    <div class="work-grid">
-      {projects.map((project, index) => (
-        <a class:list={["work", { feature: index === 0 }]} href={`/research/${project.id}/`}>
-          <div class="work-label"><span class="work-area"><AreaMarker marker={markerFor(project.researchArea.id)} />{project.label}</span><span class="work-no">{project.displayNumber}</span></div>
-          <div class="work-content"><h3>{project.title}</h3><p>{project.description}</p><span class="work-more">Project details</span></div>
-        </a>
-      ))}
-    </div>
+<section aria-labelledby="work-title" class="manual-section" id="projects">
+  <SectionHeading id="work-title" title="Current projects" page="02" />
+  <div class="cartridges">
+    {projects.map((project) => (
+      <a class={`cartridge band-${markerFor(project.researchArea.id)}`} href={`/research/${project.id}/`}>
+        <span class="cartridge-band"><span>{bandText(project)}</span><AreaMarker marker={markerFor(project.researchArea.id)} /></span>
+        <span class="cartridge-body"><h3>{project.title}</h3><p>{project.description}</p></span>
+      </a>
+    ))}
   </div>
 </section>

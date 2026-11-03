@@ -1,13 +1,8 @@
 ---
-import { getSiteSettings } from "../lib/content";
+import HomeFooter from "./HomeFooter.astro";
 interface Props {
   backLink?: boolean;
 }
-const { backLink = false } = Astro.props;
-const siteSettings = await getSiteSettings();
 ---
 
-<footer class="simple-footer">
-  {backLink ? <a href="/">← Back to homepage</a> : <span>{siteSettings.labName} · {siteSettings.institutionalAffiliation.shortName}</span>}
-  <span>Last saved: {siteSettings.lastSubstantiveContentUpdateDisplay}</span>
-</footer>
+<HomeFooter />

@@ -1,0 +1,19 @@
+---
+// Section heading styled like a page of a game manual: a "P. 01" tag, the title, a rule, and an optional link.
+interface Props {
+  id: string;
+  title: string;
+  page?: string;
+  link?: { href: string; label: string };
+  level?: "h2" | "h3";
+}
+const { id, title, page, link, level = "h2" } = Astro.props;
+const Heading = level;
+---
+
+<div class="manual-heading">
+  {page && <span class="manual-page" aria-hidden="true">P. {page}</span>}
+  <Heading id={id}>{title}</Heading>
+  <span class="manual-rule" aria-hidden="true"></span>
+  {link && <a class="manual-link" href={link.href}>{link.label}</a>}
+</div>

@@ -1,4 +1,5 @@
 ---
+import SectionHeading from "./SectionHeading.astro";
 import { getPeople } from "../lib/content";
 
 const people = await getPeople();
@@ -15,11 +16,7 @@ const alumni = people.filter((person) => person.studentStatus === "alumni");
 <section class="people-directory-section" aria-label="Lab members">
   <div class="page-shell people-directory">
     <section class="people-roster-block" aria-labelledby="co-directors-title">
-      <div class="people-group-heading">
-        <div>
-          <h2 id="co-directors-title">Co-directors</h2>
-        </div>
-      </div>
+<SectionHeading id="co-directors-title" title="Co-directors" page="01" />
       <div class="co-director-grid">
         {directors.map((person) => (
           <article class="directory-card director-profile">
@@ -44,11 +41,7 @@ const alumni = people.filter((person) => person.studentStatus === "alumni");
     </section>
 
     <section class="people-roster-block" aria-labelledby="phd-students-title">
-      <div class="people-group-heading">
-        <div>
-          <h2 id="phd-students-title">Ph.D. students</h2>
-        </div>
-      </div>
+<SectionHeading id="phd-students-title" title="Ph.D. students" page="02" />
       <div class="student-directory-grid">
         {students.map((person) => (
           <article class="directory-card student-profile">
@@ -79,9 +72,7 @@ const alumni = people.filter((person) => person.studentStatus === "alumni");
 
     {researchers.length > 0 && (
       <section class="people-roster-block" aria-labelledby="researchers-title">
-        <div class="people-group-heading">
-          <div><h2 id="researchers-title">Other lab researchers</h2></div>
-        </div>
+<SectionHeading id="researchers-title" title="Other lab researchers" />
         <div class="student-directory-grid">
           {researchers.map((person) => (
             <article class="directory-card student-profile">
@@ -97,9 +88,7 @@ const alumni = people.filter((person) => person.studentStatus === "alumni");
 
     {alumni.length > 0 && (
       <section class="people-roster-block alumni-block" aria-labelledby="alumni-title">
-        <div class="people-group-heading">
-          <div><h2 id="alumni-title">Alumni</h2></div>
-        </div>
+<SectionHeading id="alumni-title" title="Alumni" page="03" />
         <ul class="alumni-list">
           {alumni.map((person) => (
             <li>

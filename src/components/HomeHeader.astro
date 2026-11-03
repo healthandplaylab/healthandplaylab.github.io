@@ -1,22 +1,29 @@
 ---
 import { getSiteSettings } from "../lib/content";
 
+interface Props {
+  current?: "research" | "publications" | "people" | "news" | "join";
+}
+const { current } = Astro.props;
 const siteSettings = await getSiteSettings();
+const links = [
+  { key: "research", href: "/research/", label: "Research" },
+  { key: "publications", href: "/publications/", label: "Publications" },
+  { key: "people", href: "/people/", label: "People" },
+  { key: "news", href: "/news/", label: "News" },
+];
 ---
 
 <a class="skip" href="#main">Skip to content</a>
 <header class="header" id="top">
-  <div class="container header-main">
-    <a aria-label={`${siteSettings.labName} homepage`} class="wordmark" href="/#top">
+  <div class="header-main">
+    <a aria-label={`${siteSettings.labName} homepage`} class="wordmark" href="/">
       <img alt="Health and Play" height="286" src="/images/health-and-play-logo.png" width="2048" />
     </a>
     <button aria-controls="navigation" aria-expanded="false" class="menu" type="button">Menu +</button>
     <nav aria-label="Primary navigation" class="nav" id="navigation">
-      <a href="/research/">Research</a>
-      <a href="/publications/">Publications</a>
-      <a href="/people/">People</a>
-      <a href="/news/">News</a>
-      <a class="join" href="/join-us/">Join us</a>
+      {links.map((link) => <a href={link.href} aria-current={current === link.key ? "page" : undefined}>{link.label}</a>)}
+      <a class="join" href="/join-us/" aria-current={current === "join" ? "page" : undefined}>Join us</a>
     </nav>
   </div>
 </header>

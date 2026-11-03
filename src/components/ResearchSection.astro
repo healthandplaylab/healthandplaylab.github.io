@@ -1,29 +1,20 @@
 ---
 import AreaMarker from "./AreaMarker.astro";
+import SectionHeading from "./SectionHeading.astro";
 import { getResearchAreas } from "../lib/content";
 
-interface Props {
-  heading?: string;
-  showIntro?: boolean;
-}
-const { heading = "Research", showIntro = true } = Astro.props;
 const researchAreas = await getResearchAreas();
 ---
 
-<section aria-labelledby="research-title" class="section research" id="research">
-  <div class="container">
-    <div class="section-top">
-      <div><h2 id="research-title">{heading}</h2></div>
-      {showIntro && <p class="intro">Our research brings together work on health technologies, digital play, and the experiences of people who use them. The three areas below reflect related lines of inquiry across the lab.</p>}
-    </div>
-    <div class="research-strands">
-      {researchAreas.map((area) => (
-        <article class="strand" id={area.id}>
-          <span aria-hidden="true" class="strand-index"><AreaMarker marker={area.marker} />{area.displayNumber}</span>
-          <div class="strand-title"><h3><a href={`/research/#${area.id}`}>{area.title}</a></h3><p class="strand-topics">{area.topics}</p><a class="strand-more" href={`/research/#${area.id}`}>Projects in this area</a></div>
-          <p>{area.description}</p>
-        </article>
-      ))}
-    </div>
+<section aria-labelledby="research-title" class="manual-section" id="research">
+  <SectionHeading id="research-title" title="Research areas" page="01" link={{ href: "/research/", label: "All research" }} />
+  <div class="area-cards">
+    {researchAreas.map((area) => (
+      <a class="area-card notch" href={`/research/#${area.id}`}>
+        <AreaMarker marker={area.marker} size="large" />
+        <h3>{area.title}</h3>
+        <p>{area.description}</p>
+      </a>
+    ))}
   </div>
 </section>

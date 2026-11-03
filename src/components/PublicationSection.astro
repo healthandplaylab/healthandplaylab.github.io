@@ -1,16 +1,12 @@
 ---
 import PubList from "./PubList.astro";
+import SectionHeading from "./SectionHeading.astro";
 import { getPublications, recentPapers } from "../lib/content";
 
-const homepagePublications = recentPapers(await getPublications(), 6);
+const homepagePublications = recentPapers(await getPublications(), 5);
 ---
 
-<section aria-labelledby="publications-title" class="section publications" id="publications">
-  <div class="container">
-    <div class="section-header">
-      <div><h2 id="publications-title">Recent publications</h2></div>
-      <a class="more" href="/publications/">All publications</a>
-    </div>
-    <PubList publications={homepagePublications} />
-  </div>
+<section aria-labelledby="publications-title" class="manual-section" id="publications">
+  <SectionHeading id="publications-title" title="Recent publications" page="03" link={{ href: "/publications/", label: "All publications" }} />
+  <PubList publications={homepagePublications} />
 </section>

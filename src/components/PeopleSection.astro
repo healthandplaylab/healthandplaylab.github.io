@@ -1,40 +1,20 @@
 ---
+import SectionHeading from "./SectionHeading.astro";
 import { getPeople } from "../lib/content";
 
 const people = await getPeople();
-const directors = people.filter((person) => person.role === "Co-director" && person.featured);
-const students = people.filter((person) => person.studentStatus === "current" && person.featured);
+const members = people.filter((person) => (person.role === "Co-director" || person.studentStatus === "current") && person.featured);
 ---
 
-<section aria-labelledby="people-title" class="section people" id="people">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="people-title">People</h2>
-      <a class="more" href="/people/">All people</a>
-    </div>
-    <p class="people-label">Co-directors</p>
-    <div class="director-grid">
-      {directors.map((director) => (
-        <article class="director director-card">
-          {director.photo ? <img class="initial-box photo" src={director.photo} alt="" width="180" height="212" loading="lazy" decoding="async" /> : <div aria-hidden="true" class="initial-box">{director.initials}</div>}
-          <div class="director-information">
-            <h3 class="director-name">
-              {director.personalWebsite ? (
-                <a href={director.personalWebsite} rel="noopener noreferrer" target="_blank">{director.name}</a>
-              ) : director.name}
-            </h3>
-            <p class="director-meta">{director.role}</p><p>{director.researchInterests.join(" ")}</p>
-          </div>
-        </article>
-      ))}
-    </div>
-    <div class="students-wrap">
-      <div class="students-heading"><h3>Ph.D. students</h3></div>
-      <ul class="student-tiles">
-        {students.map((student) => (
-          <li>{student.photo ? <img class="student-initial photo" src={student.photo} alt="" width="240" height="205" loading="lazy" decoding="async" /> : <div aria-hidden="true" class="student-initial">{student.initials}</div>}<b>{student.personalWebsite ? <a href={student.personalWebsite} rel="noopener noreferrer" target="_blank">{student.name}</a> : student.name}</b><span>Ph.D. student · {student.cohortYear}</span></li>
-        ))}
-      </ul>
-    </div>
-  </div>
+<section aria-labelledby="people-title" class="manual-section" id="people">
+  <SectionHeading id="people-title" title="People" page="04" link={{ href: "/people/", label: "All people" }} />
+  <ul class="people-strip">
+    {members.map((person) => (
+      <li>
+        {person.photo ? <img src={person.photo} alt="" width="240" height="320" loading="lazy" decoding="async" /> : <span class="people-initials" aria-hidden="true">{person.initials}</span>}
+        <b>{person.personalWebsite ? <a href={person.personalWebsite} rel="noopener noreferrer" target="_blank">{person.name}</a> : person.name}</b>
+        <span class={person.role === "Co-director" ? "people-role director" : "people-role"}>{person.role}</span>
+      </li>
+    ))}
+  </ul>
 </section>

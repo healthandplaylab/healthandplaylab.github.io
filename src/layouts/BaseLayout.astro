@@ -1,6 +1,15 @@
 ---
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/pixelify-sans/500.css";
+import "@fontsource/ibm-plex-mono/500.css";
+import "@fontsource/ibm-plex-mono/600.css";
 import "../styles/global.css";
 import "../styles/pages.css";
+import "../styles/manual.css";
 import SecretStage from "../components/SecretStage.astro";
 import { getSiteSettings } from "../lib/content";
 
@@ -33,7 +42,9 @@ const {
     <script is:inline>document.documentElement.classList.add("js");</script>
   </head>
   <body class={bodyClass}>
-    <slot />
+    <div class="booklet">
+      <slot />
+    </div>
     <SecretStage />
     <script is:inline src="/scripts/site.js"></script>
   </body>
