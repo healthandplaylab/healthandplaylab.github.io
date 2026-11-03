@@ -14,7 +14,7 @@ const examplesFor = (project: (typeof projects)[number]) =>
   project.relatedPublications
     .map((ref) => publications.find((publication) => publication.id === ref.id))
     .filter((publication) => publication !== undefined)
-    .slice(0, 2);
+    .slice(0, 3);
 const shortTitle = (title: string) => title.split(/: (?=[A-Z])/)[0];
 ---
 
