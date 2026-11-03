@@ -8,6 +8,7 @@
   const search = form.querySelector('[name="query"]');
   const year = form.querySelector('[name="year"]');
   const venue = form.querySelector('[name="venue"]');
+  const type = form.querySelector('[name="type"]');
 
   // Lowercase, drop accents, and treat curly quotes and dashes like plain ones, so "Gui" or "children's" always match.
   const normalize = (text) =>
@@ -25,13 +26,16 @@
     const words = normalize(search.value).split(/\s+/).filter(Boolean);
     const selectedYear = year.value;
     const selectedVenue = venue.value.toLowerCase();
+    const selectedType = type ? type.value : "";
     let visible = 0;
 
     records.forEach((record) => {
       const matches =
         words.every((word) => record.dataset.searchNorm.includes(word)) &&
         (!selectedYear || record.dataset.year === selectedYear) &&
-        (!selectedVenue || record.dataset.venue === selectedVenue);
+        (!selectedVenue || record.dataset.venue === selectedVenue) &&
+        (!selectedType ||
+          (selectedType === "full" ? record.dataset.type !== "other" : record.dataset.type === selectedType));
       record.hidden = !matches;
       if (matches) visible += 1;
     });

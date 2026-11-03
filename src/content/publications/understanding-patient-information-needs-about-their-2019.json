@@ -20,9 +20,9 @@
   ],
   "featured": false,
   "award": null,
+  "publicationType": "conference",
   "displayOrder": 82,
   "visibility": "public",
-  "type": "paper",
   "researchAreas": [
     "health"
   ]

@@ -17,9 +17,9 @@
   ],
   "featured": false,
   "award": null,
+  "publicationType": "journal",
   "displayOrder": 44,
   "visibility": "public",
-  "type": "paper",
   "researchAreas": [
     "play"
   ]

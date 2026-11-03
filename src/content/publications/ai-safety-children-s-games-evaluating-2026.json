@@ -21,9 +21,9 @@
   ],
   "featured": false,
   "award": null,
+  "publicationType": "poster",
   "displayOrder": 12,
   "visibility": "public",
-  "type": "other",
   "researchAreas": [
     "play",
     "youth"

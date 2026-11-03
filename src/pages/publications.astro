@@ -5,7 +5,7 @@ import SimpleFooter from "../components/SimpleFooter.astro";
 import InteriorHero from "../components/InteriorHero.astro";
 import PubList from "../components/PubList.astro";
 import SectionHeading from "../components/SectionHeading.astro";
-import { awardedPublications, formatAuthors, getPublicationUrl, getPublications, getSiteSettings } from "../lib/content";
+import { awardedPublications, formatAuthors, getPublicationUrl, getPublications, getSiteSettings, isFullPaper, publicationTypeLabels } from "../lib/content";
 
 const publications = await getPublications();
 const siteSettings = await getSiteSettings();
@@ -42,6 +42,16 @@ const awards = awardedPublications(publications);
             <select id="publication-year" name="year"><option value="">All years</option>{years.map((year) => <option value={year}>{year}</option>)}</select>
           </div>
           <div class="filter-field">
+            <label for="publication-type">Type</label>
+            <select id="publication-type" name="type">
+              <option value="">All types</option>
+              <option value="full">Full papers (journal and conference)</option>
+              <option value="journal">Journal articles</option>
+              <option value="conference">Conference papers</option>
+              <option value="other">Posters, workshop papers, and other short works</option>
+            </select>
+          </div>
+          <div class="filter-field">
             <label for="publication-venue">Venue</label>
             <select id="publication-venue" name="venue"><option value="">All venues</option>{venues.map((venue) => <option value={venue}>{venue}</option>)}</select>
           </div>
@@ -59,10 +69,11 @@ const awards = awardedPublications(publications);
             <li
               class="publication-record"
               data-year={publication.year}
+              data-type={isFullPaper(publication) ? publication.publicationType : "other"}
               data-venue={publication.venue.toLowerCase()}
               data-search={`${publication.title} ${authors} ${publication.venue} ${publication.year} ${publication.award ?? ""}`.toLowerCase()}
             >
-              <div class="publication-date"><strong>{publication.venue}</strong><span>{publication.month} {publication.year}</span></div>
+              <div class="publication-date"><strong>{publication.venue}</strong><span>{publication.month} {publication.year}</span><span class="pub-type">{publicationTypeLabels[publication.publicationType]}</span></div>
               <div class="publication-copy">
                 <h3>
                   {publicationUrl ? (

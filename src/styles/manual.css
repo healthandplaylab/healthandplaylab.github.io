@@ -241,3 +241,9 @@ a.cartridge-more:hover{border-bottom-color:var(--coral)}
 /* Portraits: never framed by dark lines (a black-framed portrait reads as a memorial photo) */
 .directory-portrait{margin:12px;border-radius:10px}
 .student-profile .directory-portrait{margin-bottom:0}
+
+/* Publication type label (journal article, conference paper, poster, ...) */
+.pub-type{display:block;width:max-content;margin-top:6px;padding:1px 6px;border:1px solid currentColor;border-radius:4px;font:500 11px/1.5 "IBM Plex Mono",monospace;letter-spacing:.02em;color:var(--teal-ink)}
+.publication-date .pub-type{margin-top:2px;font-size:11px}
+.booklet .publication-filters{grid-template-columns:minmax(220px,1.4fr) repeat(3,minmax(0,.8fr)) auto}
+@media(max-width:1100px){.booklet .publication-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.booklet .publication-filters .filter-search{grid-column:1/-1}.booklet .filter-reset{justify-self:start}}

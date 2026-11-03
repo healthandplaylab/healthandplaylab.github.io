@@ -21,9 +21,9 @@
   ],
   "featured": true,
   "award": null,
+  "publicationType": "journal",
   "displayOrder": 0,
   "visibility": "public",
-  "type": "paper",
   "researchAreas": [
     "play",
     "youth"

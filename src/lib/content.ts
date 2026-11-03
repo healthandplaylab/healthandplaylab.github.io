@@ -109,10 +109,25 @@ export function getNewsSourceLinks(item: {
 }
 
 type PublicationRecord = Awaited<ReturnType<typeof getPublications>>[number];
+type PublicationType = PublicationRecord["publicationType"];
+
+export const publicationTypeLabels: Record<PublicationType, string> = {
+  journal: "Journal article",
+  conference: "Conference paper",
+  poster: "Poster",
+  workshop: "Workshop paper",
+  magazine: "Magazine article",
+  short: "Short paper",
+};
+
+/** Full papers are journal articles and full conference papers, as the co-directors' CVs separate them. */
+export function isFullPaper(publication: { publicationType: PublicationType }) {
+  return publication.publicationType === "journal" || publication.publicationType === "conference";
+}
 
 /** Newest papers first (the publication files are ordered newest year first via displayOrder). */
 export function recentPapers(publications: PublicationRecord[], limit?: number) {
-  const papers = publications.filter((publication) => publication.type === "paper");
+  const papers = publications.filter(isFullPaper);
   return limit ? papers.slice(0, limit) : papers;
 }
 

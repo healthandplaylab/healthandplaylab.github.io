@@ -19,9 +19,9 @@
   ],
   "featured": false,
   "award": null,
+  "publicationType": "workshop",
   "displayOrder": 24,
   "visibility": "public",
-  "type": "other",
   "researchAreas": [
     "play",
     "youth"

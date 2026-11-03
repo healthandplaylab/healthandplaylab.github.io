@@ -18,9 +18,9 @@
   ],
   "featured": false,
   "award": null,
+  "publicationType": "workshop",
   "displayOrder": 40,
   "visibility": "public",
-  "type": "other",
   "researchAreas": [
     "play"
   ]

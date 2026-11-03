@@ -20,9 +20,9 @@
   ],
   "featured": false,
   "award": "Best Paper Honorable Mention",
+  "publicationType": "conference",
   "displayOrder": 22,
   "visibility": "public",
-  "type": "paper",
   "researchAreas": [
     "play",
     "youth"

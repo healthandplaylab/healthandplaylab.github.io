@@ -20,9 +20,9 @@
   ],
   "featured": false,
   "award": "Best Paper Honorable Mention",
+  "publicationType": "conference",
   "displayOrder": 77,
   "visibility": "public",
-  "type": "paper",
   "researchAreas": [
     "health"
   ]

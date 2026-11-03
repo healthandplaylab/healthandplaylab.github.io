@@ -21,9 +21,9 @@
   ],
   "featured": false,
   "award": null,
+  "publicationType": "short",
   "displayOrder": 11,
   "visibility": "public",
-  "type": "other",
   "researchAreas": [
     "youth"
   ]

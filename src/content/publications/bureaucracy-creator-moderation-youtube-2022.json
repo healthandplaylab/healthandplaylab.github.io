@@ -18,9 +18,9 @@
   ],
   "featured": false,
   "award": null,
+  "publicationType": "poster",
   "displayOrder": 54,
   "visibility": "public",
-  "type": "other",
   "researchAreas": [
     "play"
   ]

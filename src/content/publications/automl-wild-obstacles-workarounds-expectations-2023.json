@@ -19,8 +19,8 @@
   ],
   "featured": false,
   "award": "Best Paper Honorable Mention",
+  "publicationType": "conference",
   "displayOrder": 50,
   "visibility": "public",
-  "type": "paper",
   "researchAreas": []
 }

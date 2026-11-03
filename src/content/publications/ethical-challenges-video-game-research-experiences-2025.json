@@ -19,9 +19,9 @@
   ],
   "featured": false,
   "award": null,
+  "publicationType": "magazine",
   "displayOrder": 25,
   "visibility": "public",
-  "type": "other",
   "researchAreas": [
     "play"
   ]

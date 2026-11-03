@@ -1,5 +1,5 @@
 ---
-import { formatAuthors, getPublicationUrl } from "../lib/content";
+import { formatAuthors, getPublicationUrl, publicationTypeLabels } from "../lib/content";
 
 interface Props {
   publications: Array<{
@@ -12,6 +12,7 @@ interface Props {
     doi: string | null;
     externalUrl: string | null;
     pdfUrl: string | null;
+    publicationType: keyof typeof publicationTypeLabels;
   }>;
   headingLevel?: "h3" | "h4";
 }
@@ -24,7 +25,7 @@ const Heading = headingLevel;
     const publicationUrl = getPublicationUrl(publication);
     return (
       <li>
-        <span class="pub-meta">{publication.venue}<br />{publication.year}</span>
+        <span class="pub-meta">{publication.venue}<br />{publication.year}<span class="pub-type">{publicationTypeLabels[publication.publicationType]}</span></span>
         <div>
           {publicationUrl ? (
             <a href={publicationUrl} rel="noopener noreferrer" target="_blank"><Heading>{publication.title}</Heading></a>

@@ -19,9 +19,9 @@
   ],
   "featured": false,
   "award": null,
+  "publicationType": "short",
   "displayOrder": 87,
   "visibility": "public",
-  "type": "other",
   "researchAreas": [
     "health"
   ]

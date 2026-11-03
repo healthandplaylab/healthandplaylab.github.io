@@ -27,7 +27,9 @@ const publications = defineCollection({
     researchThemes: z.array(z.string().min(1)),
     featured: z.boolean(),
     award: z.string().min(1).nullable(),
-    type: z.enum(["paper", "other"]).default("paper"),
+    // Category as listed in the co-directors' CVs: journal articles (incl. PACM HCI), conference papers,
+    // and the non-full-paper section (posters, workshop papers, magazine articles, other short papers).
+    publicationType: z.enum(["journal", "conference", "poster", "workshop", "magazine", "short"]),
     researchAreas: z.array(reference("researchAreas")).default([]),
     displayOrder: z.number().int().nonnegative(),
     visibility: z.enum(["draft", "public"]),

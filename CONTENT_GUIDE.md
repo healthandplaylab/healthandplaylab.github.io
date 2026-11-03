@@ -18,7 +18,8 @@ Choose a short lowercase filename with hyphens, such as `new-paper-title.json`. 
 4. Put each author in a separate quoted item. Write a DOI as `10.xxxx/...`, not as a web address.
 5. Use `null` for an unknown DOI or PDF URL and note it in the private `OPEN_ITEMS.md`.
 6. Increase `displayOrder` to place the paper after existing records.
-7. Set `featured` to `true` only after approval to show the paper on the homepage. This is separate from `visibility`, which controls whether it appears anywhere.
+7. Set `publicationType` from the co-directors' CVs: `journal` (journal articles, including PACM HCI papers at CSCW and CHI PLAY), `conference` (full conference papers), or, for the CVs' posters/workshop/magazine section, `poster`, `workshop`, `magazine`, or `short` when the work is a short paper of another kind. Only `journal` and `conference` count as full papers; the homepage's recent publications list shows full papers only.
+8. `visibility` controls whether a record appears anywhere on the site.
 
 ## Add a student or other person
 

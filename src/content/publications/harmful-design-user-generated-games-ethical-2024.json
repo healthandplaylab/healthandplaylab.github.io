@@ -21,9 +21,9 @@
   ],
   "featured": false,
   "award": "Best Paper Honorable Mention",
+  "publicationType": "journal",
   "displayOrder": 30,
   "visibility": "public",
-  "type": "paper",
   "researchAreas": [
     "play"
   ]
