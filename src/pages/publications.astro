@@ -80,7 +80,8 @@ const awards = awardedPublications(publications);
                     <a href={publicationUrl} rel="noopener noreferrer" target="_blank">{publication.title}</a>
                   ) : publication.title}
                 </h3>
-                <p>{authors}{publication.award ? ` · ${publication.award}` : ""}</p>
+                <p>{authors}</p>
+                {publication.award && <p class="pub-award">★ {publication.award}</p>}
               </div>
             </li>
             );
