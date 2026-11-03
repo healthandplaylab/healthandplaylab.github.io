@@ -5,7 +5,7 @@ import { getPeople } from "../lib/content";
 const people = await getPeople();
 const directors = people.filter((person) => person.role === "Co-director");
 const students = people.filter(
-  (person) => person.studentStatus === "current" && person.role === "Ph.D. student",
+  (person) => person.studentStatus === "current" && (person.role === "Ph.D. student" || person.role === "Ph.D. candidate"),
 );
 const researchers = people.filter(
   (person) => person.studentStatus === "not-applicable" && person.role !== "Co-director",
@@ -53,7 +53,7 @@ const alumni = people.filter((person) => person.studentStatus === "alumni");
               )}
             </div>
             <div class="directory-copy">
-              <p class="directory-role">{person.role}{person.cohortYear ? ` · since ${person.cohortYear}` : ""}</p>
+              <p class="directory-role">{person.role}{person.startYear ? ` · joined ${person.startYear}` : ""}</p>
               <h3>{person.name}</h3>
               {person.researchInterests.length > 0 && (
                 <div class="current-quest">

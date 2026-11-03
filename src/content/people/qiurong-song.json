@@ -1,8 +1,8 @@
 {
   "name": "Qiurong Song",
-  "role": "Ph.D. student",
+  "role": "Ph.D. candidate",
   "studentStatus": "current",
-  "startYear": null,
+  "startYear": 2022,
   "cohortYear": 2022,
   "researchInterests": [
     "Privacy and security risks of everyday technologies for at-risk users, such as people using period and fertility tracking apps, children, and content creators."
