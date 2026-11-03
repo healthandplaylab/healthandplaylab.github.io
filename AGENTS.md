@@ -15,7 +15,7 @@ These instructions apply to the entire repository. The current Astro migration a
 
 - Preserve the homepage `PRESS START` research interaction.
 - Preserve the `GAME OVER` 404 page and its accessible recovery links.
-- Preserve the accessible `New Player Guide` interface on the Join Us page.
+- Preserve the accessible `New Player Guide` interface in the "Join the lab" section of the Contact us page (`/contact/#join`; the old `/join-us/` address redirects there).
 - Preserve the Konami Code Easter egg as a subtle, optional enhancement.
 - Keep all core information available without discovering an Easter egg or relying on animation, hover, or audio.
 

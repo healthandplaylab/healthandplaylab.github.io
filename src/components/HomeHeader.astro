@@ -2,7 +2,7 @@
 import { getSiteSettings } from "../lib/content";
 
 interface Props {
-  current?: "research" | "publications" | "people" | "news" | "join";
+  current?: "research" | "publications" | "people" | "news" | "contact";
 }
 const { current } = Astro.props;
 const siteSettings = await getSiteSettings();
@@ -23,7 +23,7 @@ const links = [
     <button aria-controls="navigation" aria-expanded="false" class="menu" type="button">Menu +</button>
     <nav aria-label="Primary navigation" class="nav" id="navigation">
       {links.map((link) => <a href={link.href} aria-current={current === link.key ? "page" : undefined}>{link.label}</a>)}
-      <a class="join" href="/join-us/" aria-current={current === "join" ? "page" : undefined}>Join us</a>
+      <a class="join" href="/contact/" aria-current={current === "contact" ? "page" : undefined}>Contact us</a>
     </nav>
   </div>
 </header>

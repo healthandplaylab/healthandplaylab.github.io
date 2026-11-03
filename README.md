@@ -15,7 +15,7 @@ All content lives in small JSON files under `src/content/`, one file per record.
 | Projects | `src/content/projects/` |
 | News | `src/content/news/` |
 | Research areas | `src/content/research-areas/` |
-| Join Us paths | `src/content/join-paths/` |
+| Join the lab paths (Contact us page) | `src/content/join-paths/` |
 | Lab name, address, contacts, "Last saved" date | `src/content/site-settings/site.json` |
 
 See `CONTENT_GUIDE.md` for step-by-step instructions and `AGENTS.md` for the rules every editor (human or AI) follows: never invent facts, keep the approved design, and verify every change with a build.

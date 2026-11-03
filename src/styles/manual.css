@@ -250,3 +250,15 @@ a.cartridge-more:hover{border-bottom-color:var(--coral)}
 
 /* Award line in the full publication list, matching the awards section */
 .publication-copy p.pub-award{margin-top:8px;color:#984A35;font-weight:650;font-size:13px}
+
+/* Contact page */
+.booklet .contact-section{padding:48px 0 48px}
+.booklet .join-section{padding-bottom:80px}
+.contact-intro{max-width:680px;margin:-10px 0 24px;font-size:17px;line-height:1.6;color:var(--muted)}
+.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.contact-card{border:2px solid var(--ink);border-radius:14px;padding:20px 22px;background:var(--paper);min-width:0}
+.contact-label{margin:0;font:600 11px/1.5 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--coral-ink)}
+.contact-card h3{margin:6px 0 10px;font-size:21px;letter-spacing:-.02em}
+.contact-card a{font-weight:700;color:var(--teal-ink);overflow-wrap:anywhere}
+.contact-card address{font-style:normal;display:flex;flex-direction:column;line-height:1.55;color:var(--muted)}
+@media(max-width:900px){.contact-cards{grid-template-columns:1fr}}
