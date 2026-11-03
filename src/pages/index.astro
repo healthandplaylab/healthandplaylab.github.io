@@ -11,7 +11,6 @@ import HomeFooter from "../components/HomeFooter.astro";
 import { getSiteSettings } from "../lib/content";
 
 const siteSettings = await getSiteSettings();
-const pixels = "ffnnoonnnnnfcoooonnnnnnoowonnn".split("");
 ---
 
 <BaseLayout title={siteSettings.labName} bodyClass="v8-page home-page">
@@ -22,7 +21,6 @@ const pixels = "ffnnoonnnnnfcoooonnnnnnoowonnn".split("");
         <p class="hero-kicker">The Health and Play Lab · Penn State IST</p>
         <h1 id="hero-heading"><span class="hero-health">Health</span> and <span class="hero-play">play</span> are fundamental human values.</h1>
         <p class="hero-copy">At the Health and Play Lab, we study how digital technologies support—and sometimes undermine—health, wellbeing, and play. Our research examines how people experience health technologies, AI systems, games, and online communities, and how their design and governance shape privacy, safety, accountability, and participation.</p>
-        <div class="pixel-field" aria-hidden="true">{pixels.map((cell) => <span class={`px-${cell}`}></span>)}</div>
       </div>
       <Controller />
     </section>
