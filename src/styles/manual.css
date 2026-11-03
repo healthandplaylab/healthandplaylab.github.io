@@ -51,7 +51,9 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .px-f{background:var(--teal-strong)}.px-o{border:3px solid var(--teal-strong)}.px-c{border:3px solid var(--teal-strong);background:linear-gradient(90deg,var(--teal-strong) 50%,transparent 50%)}.px-w{background:var(--coral)}
 
 .controller{position:relative;height:360px;max-width:520px;width:100%;justify-self:end;background:#DCE7DF;border:2px solid var(--ink);border-radius:170px 170px 130px 130px;box-shadow:8px 8px 0 var(--ink)}
-.controller-start{position:absolute;top:24px;left:50%;transform:translateX(-50%);font-family:"Pixelify Sans",monospace;font-size:17px;color:#1F5F57!important;text-decoration:none;padding:4px 8px;white-space:nowrap}
+.controller-start{position:absolute;top:14px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;font-family:"Pixelify Sans",monospace;font-size:17px;color:#1F5F57!important;text-decoration:none;padding:4px 8px;white-space:nowrap}
+.start-hint{font-family:Inter,Arial,sans-serif;font-size:12.5px;font-weight:600;color:var(--muted)}
+.controller-start:hover .start-hint{color:var(--coral-ink);text-decoration:underline;text-underline-offset:3px}
 .controller-start:hover{color:var(--coral-ink)!important;text-decoration:none!important}
 .dpad{position:absolute;left:96px;top:116px;width:126px;height:126px}
 .dpad-v,.dpad-h{position:absolute;background:var(--ink);border-radius:7px}
@@ -158,7 +160,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
   .manual-section{padding:0 18px 40px}
   .manual-hero{padding:34px 18px 40px;gap:32px}
   .manual-hero .hero-copy{font-size:17px}
-  .controller{height:auto;border-radius:60px 60px 48px 48px;padding:58px 22px 52px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:center;box-shadow:6px 6px 0 var(--ink)}
+  .controller{height:auto;border-radius:60px 60px 48px 48px;padding:74px 22px 52px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:center;box-shadow:6px 6px 0 var(--ink)}
   .controller .dpad{display:none}
   .controller .ctl{position:static;transform:none;background:var(--paper);border:2px solid var(--ink);border-radius:10px;padding:10px 12px;text-align:center}
   .controller .ctl-up{order:1}.controller .ctl-right{order:2}.controller .ctl-left{order:3}.controller .ctl-down{order:4}
