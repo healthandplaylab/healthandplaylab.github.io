@@ -19,6 +19,8 @@ const publications = defineCollection({
     authors: z.array(z.string().min(1)).min(1),
     year: z.number().int().min(1900).max(2100),
     month: z.string().min(1).nullable(),
+    // Month of acceptance (YYYY-MM) where known from a verified source; used to order papers newest first.
+    accepted: z.string().regex(/^\d{4}-\d{2}$/).optional(),
     venue: z.string().min(1),
     doi: z.string().regex(/^10\.\d{4,9}\/.+$/).nullable(),
     pdfUrl: webUrl.nullable(),
