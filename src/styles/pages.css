@@ -86,8 +86,8 @@ a:focus-visible,button:focus-visible,[role=tab]:focus-visible{outline:3px solid 
 .filter-field input:focus,.filter-field select:focus{outline:3px solid #008281;outline-offset:2px}
 .filter-reset{height:47px;border:1px solid #202B2C;background:transparent;padding:0 18px;font-weight:700;cursor:pointer}
 .filter-reset:hover{background:#202B2C;color:white}
-.publication-index{list-style:none;padding:0;margin:0;border-top:1px solid #D9D4C8}
-.publication-record{display:grid;grid-template-columns:150px minmax(0,1fr);gap:30px;padding:28px 0 31px;border-bottom:1px solid #C9CDC5}
+.publication-index{list-style:none;padding:0;margin:0}
+.publication-record{display:grid;grid-template-columns:150px minmax(0,1fr);gap:30px;padding:28px 0 31px;border-bottom:1px solid #D9D4C8}
 .publication-record[hidden]{display:none}
 .publication-date{display:flex;flex-direction:column;gap:5px;color:#006F70}
 .publication-date strong{font:750 13px/1.4 ui-monospace,monospace}
