@@ -20,18 +20,9 @@ const awards = awardedPublications(publications);
     <InteriorHero
       title="Publications"
     />
-    {awards.length > 0 && (
-      <section class="awards-section" aria-labelledby="awards-title">
-        <div class="page-shell">
-          <SectionHeading id="awards-title" title="Paper awards since 2019" page="01" />
-          <p class="awards-note">Since the lab was founded in 2019. For earlier awards, see the co-directors’ personal websites: <a href="https://xinninggui.github.io/" rel="noopener noreferrer" target="_blank">Xinning Gui</a> and <a href="https://yubokou.github.io/" rel="noopener noreferrer" target="_blank">Yubo Kou</a>.</p>
-          <PubList publications={awards} />
-        </div>
-      </section>
-    )}
     <section class="archive-section" aria-labelledby="publication-list-title">
       <div class="page-shell">
-        <SectionHeading id="publication-list-title" title="All publications since 2019" page="02" />
+        <SectionHeading id="publication-list-title" title="All publications since 2019" page="01" />
         <form class="publication-filters" id="publication-filters" role="search">
           <div class="filter-field filter-search">
             <label for="publication-search">Search publications</label>
@@ -90,6 +81,15 @@ const awards = awardedPublications(publications);
         <p class="filter-empty" id="publication-empty" hidden>No publications match those filters. <button class="filter-clear" type="reset" form="publication-filters">Clear all filters</button></p>
       </div>
     </section>
+    {awards.length > 0 && (
+      <section class="awards-section" aria-labelledby="awards-title">
+        <div class="page-shell">
+          <SectionHeading id="awards-title" title="Paper awards since 2019" page="02" />
+          <p class="awards-note">Since the lab was founded in 2019. For earlier awards, see the co-directors’ personal websites: <a href="https://xinninggui.github.io/" rel="noopener noreferrer" target="_blank">Xinning Gui</a> and <a href="https://yubokou.github.io/" rel="noopener noreferrer" target="_blank">Yubo Kou</a>.</p>
+          <PubList publications={awards} />
+        </div>
+      </section>
+    )}
   </main>
   <SimpleFooter backLink />
   <script is:inline src="/scripts/publications.js"></script>
