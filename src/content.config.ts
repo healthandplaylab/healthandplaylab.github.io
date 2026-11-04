@@ -21,6 +21,8 @@ const publications = defineCollection({
     month: z.string().min(1).nullable(),
     // Month of acceptance (YYYY-MM) where known from a verified source; used to order papers newest first.
     accepted: z.string().regex(/^\d{4}-\d{2}$/).optional(),
+    // Month of publication or presentation (YYYY-MM), used for ordering when the acceptance month is unknown.
+    published: z.string().regex(/^\d{4}-\d{2}$/).optional(),
     venue: z.string().min(1),
     doi: z.string().regex(/^10\.\d{4,9}\/.+$/).nullable(),
     pdfUrl: webUrl.nullable(),

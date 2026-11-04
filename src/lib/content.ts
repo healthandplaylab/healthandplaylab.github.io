@@ -32,8 +32,8 @@ export async function getPublications() {
   return entries
     .filter((entry) => entry.data.visibility === "public")
     .map((entry) => ({ id: entry.id, ...entry.data }))
-    // Newest first: by year, then by acceptance month where known, then by the curated displayOrder.
-    .sort((a, b) => b.year - a.year || (b.accepted ?? "").localeCompare(a.accepted ?? "") || a.displayOrder - b.displayOrder);
+    // Newest first: by year, then by acceptance month (or publication month when that is unknown), then by the curated displayOrder.
+    .sort((a, b) => b.year - a.year || (b.accepted ?? b.published ?? "").localeCompare(a.accepted ?? a.published ?? "") || a.displayOrder - b.displayOrder);
 }
 
 export async function getPeople() {
