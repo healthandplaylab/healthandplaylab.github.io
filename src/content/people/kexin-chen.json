@@ -4,7 +4,9 @@
   "studentStatus": "current",
   "startYear": 2025,
   "cohortYear": 2025,
-  "researchInterests": [],
+  "researchInterests": [
+    "How families navigate online safety and platform governance together, from moderation decisions and incidents to emerging technologies such as AI agents."
+  ],
   "photo": "/images/people/kexin-chen.jpg",
   "personalWebsite": null,
   "alumniDestination": null,
