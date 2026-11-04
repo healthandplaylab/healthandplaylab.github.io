@@ -60,7 +60,8 @@ export async function getNewsItems() {
   return entries
     .filter((entry) => entry.data.visibility === "public")
     .map((entry) => ({ id: entry.id, ...entry.data }))
-    .sort((a, b) => a.displayOrder - b.displayOrder);
+    // Newest first by date (a year-only date sorts after the dated items of that year), then the curated order.
+    .sort((a, b) => b.date.localeCompare(a.date) || a.displayOrder - b.displayOrder);
 }
 
 export async function getResearchAreas() {
