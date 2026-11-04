@@ -235,9 +235,9 @@ article.cartridge h3 a:hover{text-decoration:underline!important;text-decoration
 article.cartridge:hover h3{text-decoration:none}
 .cartridge-papers ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
 .cartridge-papers li{font-size:14.5px;font-weight:600;line-height:1.4}
-.cartridge-papers li a{color:var(--ink)!important;text-decoration:underline;text-decoration-color:#9DB9B0;text-underline-offset:3px}
-.cartridge-papers li a:hover{text-decoration-color:var(--coral)}
-a.cartridge-more{align-self:flex-start;color:var(--teal-ink)!important;border-bottom:1px solid var(--teal-ink);text-decoration:none!important}
+.cartridge-papers li a{color:var(--ink)!important;text-decoration:underline!important;text-decoration-color:#C9D6CF!important;text-decoration-thickness:1px!important;text-underline-offset:4px}
+.cartridge-papers li a:hover{text-decoration-color:var(--coral)!important}
+a.cartridge-more{align-self:flex-start;justify-self:start;width:max-content;color:var(--teal-ink)!important;border-bottom:1px solid var(--teal-ink);text-decoration:none!important}
 a.cartridge-more:hover{border-bottom-color:var(--coral)}
 .research-area-projects.single .cartridge-more{grid-column:1}
 
