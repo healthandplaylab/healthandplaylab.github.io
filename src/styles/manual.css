@@ -29,7 +29,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 /* Section headings: "P. 01  Title ———  link" */
 .manual-section{padding:0 44px 56px}
 .manual-heading{display:flex;align-items:center;gap:16px;margin:0 0 26px;flex-wrap:wrap}
-.manual-page{font-size:13px;background:var(--ink);color:var(--paper);padding:4px 10px;flex-shrink:0}
+.manual-mark{width:34px;height:auto;flex-shrink:0;align-self:center}
 .manual-heading h2,.manual-heading h3{margin:0;font-family:Inter,Arial,sans-serif;font-weight:700;font-size:clamp(30px,3vw,40px);letter-spacing:-.04em;line-height:1.1}
 .manual-rule{flex:1;min-width:40px}
 .manual-link{font-weight:700;font-size:15px;color:var(--teal-ink)!important;border-bottom:1px solid var(--teal-ink)}
