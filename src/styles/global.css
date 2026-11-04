@@ -82,7 +82,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--warm);outline-offse
 .section-top .intro{padding-left:25px;border-left:1px solid var(--line-dark);font-size:19px;line-height:1.62;color:#4C5957;max-width:720px;margin-top:11px}
 .research .section-top{grid-template-columns:.46fr 1fr;margin-bottom:40px}
 .research .section-top .intro{max-width:840px}
-.research-strands{border-top:1px solid var(--ink)}
+.research-strands{border-top:1px solid #D9D4C8}
 .strand{display:grid;grid-template-columns:62px minmax(265px,.9fr) minmax(350px,1.1fr);gap:24px;padding:35px 12px 38px 0;border-bottom:1px solid var(--line);align-items:start;scroll-margin-top:24px}
 .strand-index{font:600 13px/1.7 'IBM Plex Mono',ui-monospace,monospace;color:#006F70;padding-top:5px}
 .strand h3{font-size:clamp(27px,2.25vw,34px);font-weight:650;line-height:1.15;letter-spacing:-.045em;max-width:520px}
@@ -112,7 +112,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--warm);outline-offse
 .work:hover h3{text-decoration:none}
 
 .publications .section-header,.people .section-header,.news .section-header{margin-bottom:33px}
-.pub-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.pub-list{list-style:none;margin:0;padding:0;border-top:1px solid #D9D4C8}
 .pub-list li{display:grid;grid-template-columns:135px minmax(0,1fr);gap:23px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
 .pub-list li .pub-meta{grid-column:1;grid-row:1}
 .pub-list li>div{grid-column:2;grid-row:1}

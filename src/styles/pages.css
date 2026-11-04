@@ -86,7 +86,7 @@ a:focus-visible,button:focus-visible,[role=tab]:focus-visible{outline:3px solid 
 .filter-field input:focus,.filter-field select:focus{outline:3px solid #008281;outline-offset:2px}
 .filter-reset{height:47px;border:1px solid #202B2C;background:transparent;padding:0 18px;font-weight:700;cursor:pointer}
 .filter-reset:hover{background:#202B2C;color:white}
-.publication-index{list-style:none;padding:0;margin:0;border-top:1px solid #202B2C}
+.publication-index{list-style:none;padding:0;margin:0;border-top:1px solid #D9D4C8}
 .publication-record{display:grid;grid-template-columns:150px minmax(0,1fr);gap:30px;padding:28px 0 31px;border-bottom:1px solid #C9CDC5}
 .publication-record[hidden]{display:none}
 .publication-date{display:flex;flex-direction:column;gap:5px;color:#006F70}
@@ -98,7 +98,7 @@ a:focus-visible,button:focus-visible,[role=tab]:focus-visible{outline:3px solid 
 .topic-list{display:flex;gap:7px;flex-wrap:wrap;list-style:none;padding:0;margin:15px 0 0}
 .topic-list li{border:1px solid #B9C8BF;background:#F2F5F0;color:#3F5A52;padding:3px 8px;font:600 10px/1.4 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.025em}
 .filter-empty{padding:35px 0;border-bottom:1px solid #C9CDC5;color:#596864}
-.news-archive{border-top:1px solid #202B2C}
+.news-archive{border-top:1px solid #D9D4C8}
 .news-archive-item{display:grid;grid-template-columns:210px minmax(0,1fr);gap:38px;padding:31px 0 35px;border-bottom:1px solid #C9CDC5}
 .news-archive-meta{display:grid;grid-template-columns:33px 1fr;gap:10px;align-items:start;font:650 12px/1.55 ui-monospace,monospace;color:#006F70}
 .news-archive-meta>span{color:#984A35}
@@ -253,7 +253,7 @@ html:not(.js) .guide-tabs{display:none}
 .project-body{padding:40px 0 90px}
 .project-back{display:inline-block;font-size:14px;font-weight:650;color:#1F5F57!important;margin-bottom:34px}
 .project-grid{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.6fr);gap:56px;align-items:start}
-.project-facts{margin:0;border-top:1px solid #1F2B2C}
+.project-facts{margin:0;border-top:1px solid #D9D4C8}
 .project-facts div{padding:14px 0;border-bottom:1px solid #C8D0C8}
 .project-facts dt{font:700 11px/1.4 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#335C55}
 .project-facts dd{margin:6px 0 0;font-size:14.5px;line-height:1.55}

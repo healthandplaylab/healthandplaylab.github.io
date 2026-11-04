@@ -3,10 +3,10 @@
    projects are cartridges, the homepage navigation is a controller, and the logo's
    pixel squares (filled = health, outlined = play, half = youth) mark the research areas. */
 
-:root{--frame:#E9E4D8;--ink:#1F2B2C;--paper:#FAF8F3;--mint:#EEF2EE;--teal-strong:#0B7D7C;--teal-ink:#0B6E6E;--coral:#C96E55;--coral-btn:#DA8A72;--coral-ink:#984A35;--muted:#415250;--muted-2:#566A63;--line:#C9CDC5}
+:root{--frame:#E9E4D8;--ink:#1F2B2C;--paper:#FAF8F3;--mint:#EEF2EE;--teal-strong:#0B7D7C;--teal-ink:#0B6E6E;--coral:#C96E55;--coral-btn:#DA8A72;--coral-ink:#984A35;--muted:#415250;--muted-2:#566A63;--line:#C9CDC5;--rule:#D9D4C8}
 html{background:var(--frame)}
 body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Arial,sans-serif}
-.booklet{max-width:1440px;margin:28px auto;background:var(--paper);border:2px solid var(--ink);border-radius:28px;width:calc(100% - 56px)}
+.booklet{max-width:1440px;margin:28px auto;background:var(--paper);border:1px solid var(--rule);border-radius:28px;width:calc(100% - 56px)}
 .booklet>main{display:block}
 .mono,.manual-page,.hero-kicker,time{font-family:"IBM Plex Mono",ui-monospace,monospace}
 .pixel{font-family:"Pixelify Sans","IBM Plex Mono",monospace}
@@ -16,7 +16,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .section-header h2::before,.section-top h2::before,.page-hero h1::before,.project-block h2::before,.awards-section h2::before,.people-group-heading h2::before{content:none!important;display:none!important}
 
 /* Header (shared by every page) */
-.booklet .header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:2px solid var(--ink);border-radius:26px 26px 0 0}
+.booklet .header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule);border-radius:26px 26px 0 0}
 .booklet .header-main{height:auto;min-height:84px;padding:0 44px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:auto;margin:0}
 .booklet .wordmark{width:250px}
 .booklet .nav{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:600}
@@ -31,7 +31,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .manual-heading{display:flex;align-items:center;gap:16px;margin:0 0 26px;flex-wrap:wrap}
 .manual-page{font-size:13px;background:var(--ink);color:var(--paper);padding:4px 10px;flex-shrink:0}
 .manual-heading h2,.manual-heading h3{margin:0;font-family:Inter,Arial,sans-serif;font-weight:700;font-size:clamp(30px,3vw,40px);letter-spacing:-.04em;line-height:1.1}
-.manual-rule{flex:1;min-width:40px;border-top:2px solid var(--ink)}
+.manual-rule{flex:1;min-width:40px;border-top:1px solid var(--rule)}
 .manual-link{font-weight:700;font-size:15px;color:var(--teal-ink)!important;border-bottom:1px solid var(--teal-ink)}
 .manual-link:hover{border-bottom-color:var(--coral);text-decoration:none!important}
 
@@ -82,8 +82,8 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 
 /* Project cartridges */
 .cartridges{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.cartridge{border:2px solid var(--ink);border-radius:16px 16px 4px 4px;overflow:hidden;display:flex;flex-direction:column;color:var(--ink)!important;text-decoration:none!important;background:var(--paper)}
-.cartridge-band{height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px;border-bottom:2px solid var(--ink);font-family:"IBM Plex Mono",monospace;font-size:12px;text-transform:uppercase;color:var(--teal-ink)}
+.cartridge{border:1px solid var(--rule);border-radius:16px 16px 4px 4px;overflow:hidden;display:flex;flex-direction:column;color:var(--ink)!important;text-decoration:none!important;background:var(--paper)}
+.cartridge-band{height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px;border-bottom:0;font-family:"IBM Plex Mono",monospace;font-size:12px;text-transform:uppercase;color:var(--teal-ink)}
 .cartridge-band .area-marker{margin:0}
 .band-filled .cartridge-band{background:var(--teal-strong);color:var(--paper)}
 .band-filled .cartridge-band .area-marker{background:var(--paper);border:0}
@@ -94,7 +94,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .cartridge:hover h3,.cartridge:hover h4{text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:5px}
 
 /* Publication lists */
-.booklet .pub-list{border-top:2px solid var(--ink)}
+.booklet .pub-list{border-top:1px solid var(--rule)}
 .booklet .pub-list li{grid-template-columns:150px minmax(0,1fr);padding:16px 0;border-bottom:1px solid var(--line)}
 .booklet .pub-meta{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:13px;color:var(--teal-ink)}
 .booklet .pub-list h3,.booklet .pub-list h4{font-size:17px;font-weight:600;letter-spacing:-.01em;margin:0;color:var(--ink)}
@@ -117,7 +117,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .news-card p{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
 
 /* Join box */
-.manual-join{margin:0 44px 44px;border:2px solid var(--ink);border-radius:18px;background:var(--teal-strong);color:var(--paper);padding:40px 48px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center}
+.manual-join{margin:0 44px 44px;border:0;border-radius:18px;background:var(--teal-strong);color:var(--paper);padding:40px 48px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center}
 .manual-join-kicker{margin:0 0 8px;font-family:"Pixelify Sans",monospace;font-size:16px;color:var(--paper);text-transform:uppercase}
 .manual-join h2{margin:0 0 10px;font-size:40px;font-weight:700;letter-spacing:-.04em;color:var(--paper)}
 .manual-join p{margin:0;font-size:17px;color:var(--paper)}
@@ -125,14 +125,14 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .pill-button:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
 
 /* Footer */
-.manual-footer{border-top:2px solid var(--ink);padding:22px 44px 26px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.manual-footer{border-top:1px solid var(--rule);padding:22px 44px 26px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
 .manual-footer b{font-size:16px}
 .manual-footer p{margin:6px 0 0;font-size:14px;line-height:1.55;color:var(--muted)}
 .manual-footer-meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px;font-size:13px;color:var(--muted-2)}
 .manual-footer-meta a{font-weight:600;color:var(--teal-ink)!important}
 
 /* Interior page heroes inside the booklet */
-.booklet .page-hero{background:transparent;border-bottom:2px solid var(--ink);padding:56px 0 44px}
+.booklet .page-hero{background:transparent;border-bottom:1px solid var(--rule);padding:56px 0 44px}
 .booklet .page-shell{width:auto;margin:0 44px}
 .booklet .page-hero h1{font-family:Inter,Arial,sans-serif;font-weight:800;letter-spacing:-.05em;font-size:clamp(44px,5.4vw,72px);line-height:1.02;margin:0 0 18px}
 .booklet .page-intro{font-size:19px;line-height:1.6;color:var(--muted);max-width:820px}
@@ -153,7 +153,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
   .booklet .header{border-radius:16px 16px 0 0}
   .booklet .header-main{min-height:68px;padding:0 18px}
   .booklet .wordmark{width:min(220px,58vw)}
-  .booklet .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:16px 18px 20px;flex-direction:column;align-items:stretch;gap:12px}
+  .booklet .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:16px 18px 20px;flex-direction:column;align-items:stretch;gap:12px}
   .booklet .nav.open{display:flex}
   .booklet .nav .join{text-align:center}
   html:not(.js) .booklet .nav{display:flex;position:static;border:0;padding:0 0 12px;flex-direction:row;flex-wrap:wrap}
@@ -178,11 +178,11 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 @media(prefers-reduced-motion:reduce){.ctl-a:hover,.pill-button:hover{transform:none}}
 
 /* Research page */
-.area-select{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;margin:28px 44px 8px;padding:16px 20px;border:3px solid var(--ink);box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--ink);background:var(--paper)}
+.area-select{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;margin:28px 44px 8px;padding:16px 20px;border:1px solid var(--rule);border-radius:14px;background:var(--paper)}
 .area-select-label{font-family:"Pixelify Sans",monospace;font-size:14px;color:var(--coral-ink);margin-right:6px}
 .area-select a{display:inline-flex;align-items:center;font-weight:600;font-size:15px;color:var(--ink)!important;text-decoration:none!important;padding:4px 0}
 .area-select a:hover{color:var(--coral-ink)!important}
-.research-area{padding:52px 44px;border-top:2px solid var(--ink);margin-top:36px;scroll-margin-top:100px}
+.research-area{padding:52px 44px;border-top:1px solid var(--rule);margin-top:36px;scroll-margin-top:100px}
 .research-area:nth-of-type(odd){background:var(--mint)}
 .research-area+.research-area{margin-top:0}
 .research-area:last-of-type{border-radius:0}
@@ -220,7 +220,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .booklet .awards-section{padding:48px 0 8px}
 .booklet .awards-note{margin:-14px 0 18px}
 .booklet .people-directory .people-roster-block{padding-top:44px}
-.booklet .publication-filters{border:2px solid var(--ink);background:var(--mint)}
+.booklet .publication-filters{border:1px solid var(--rule);background:var(--mint)}
 .booklet .archive-heading{display:flex;justify-content:flex-end;border:0;margin:0 0 8px;padding:0}
 .booklet .co-director-card,.booklet .directory-card{border:1px solid #C9D6CF;border-radius:14px;overflow:hidden}
 
@@ -258,7 +258,7 @@ a.cartridge-more:hover{border-bottom-color:var(--coral)}
 .booklet .join-section{padding-bottom:80px}
 .contact-intro{max-width:680px;margin:-10px 0 24px;font-size:17px;line-height:1.6;color:var(--muted)}
 .contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.contact-card{border:2px solid var(--ink);border-radius:14px;padding:20px 22px;background:var(--paper);min-width:0}
+.contact-card{border:1px solid var(--rule);border-radius:14px;padding:20px 22px;background:var(--paper);min-width:0}
 .contact-label{margin:0;font:600 11px/1.5 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--coral-ink)}
 .contact-card h3{margin:6px 0 10px;font-size:21px;letter-spacing:-.02em}
 .contact-card a{font-weight:700;color:var(--teal-ink);overflow-wrap:anywhere}
