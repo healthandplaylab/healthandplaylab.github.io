@@ -53,6 +53,7 @@ const people = defineCollection({
     photo: z.string().min(1).nullable(),
     personalWebsite: webUrl.nullable(),
     alumniDestination: z.string().min(1).nullable(),
+    alumniNote: z.string().min(1).optional(),
     initials: z.string().min(1).max(4),
     displayOrder: z.number().int().nonnegative(),
     featured: z.boolean(),

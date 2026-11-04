@@ -8,11 +8,12 @@
   ],
   "year": 2026,
   "month": null,
+  "accepted": "2025-12",
   "published": "2026-08",
   "venue": "USENIX Security",
   "doi": null,
   "pdfUrl": null,
-  "externalUrl": null,
+  "externalUrl": "https://www.usenix.org/conference/usenixsecurity26/presentation/song-qiurong",
   "projectAssociations": [],
   "researchThemes": [
     "Play",

@@ -3,9 +3,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SimpleHeader from "../components/SimpleHeader.astro";
 import SimpleFooter from "../components/SimpleFooter.astro";
 import InteriorHero from "../components/InteriorHero.astro";
-import { getNewsItems, getNewsSourceLinks, getSiteSettings } from "../lib/content";
+import { getNewsItems, getNewsSourceLinks, getPublications, getSiteSettings } from "../lib/content";
 
 const newsItems = await getNewsItems();
+const publications = await getPublications();
+// Each paper named in a news item links to its own record (DOI, else the publisher page), so every paper gets a link
+// rather than one paper getting a separate source button.
+const key = (t: string) => t.toLowerCase().replace(/[‘’“”"']/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+const paperLink = new Map(publications.map((p) => [key(p.title), p.doi ? `https://doi.org/${p.doi}` : p.externalUrl ?? p.pdfUrl ?? null]));
+const splitDetail = (detail: string) => {
+  const i = detail.indexOf(" — ");
+  const title = i === -1 ? detail : detail.slice(0, i);
+  return { title, rest: i === -1 ? "" : detail.slice(i), url: paperLink.get(key(title)) ?? null };
+};
 const siteSettings = await getSiteSettings();
 ---
 
@@ -19,7 +29,9 @@ const siteSettings = await getSiteSettings();
       <div class="page-shell">
         <div class="news-archive">
           {newsItems.map((item) => {
-            const sourceLinks = getNewsSourceLinks(item);
+            const details = item.details.map(splitDetail);
+            const paperUrls = new Set(details.map((d) => d.url).filter(Boolean));
+            const sourceLinks = getNewsSourceLinks(item).filter((link) => !paperUrls.has(link.url));
 
             return (
             <article class="news-archive-item">
@@ -28,7 +40,7 @@ const siteSettings = await getSiteSettings();
                 <h2>{item.title}</h2><p>{item.summary}</p>
                 {item.details.length > 0 && (
                   <ul class="news-details" aria-label="Announcement details">
-                    {item.details.map((detail) => <li>{detail}</li>)}
+                    {details.map((d) => <li>{d.url ? <a href={d.url} rel="noopener noreferrer" target="_blank">{d.title}</a> : d.title}{d.rest}</li>)}
                   </ul>
                 )}
                 {sourceLinks.length > 0 && (

@@ -95,7 +95,7 @@ const alumni = people.filter((person) => person.studentStatus === "alumni");
               <span class="alumni-initials" aria-hidden="true">{person.initials}</span>
               <div>
                 <h3>{person.personalWebsite ? <a href={person.personalWebsite} rel="noopener noreferrer" target="_blank">{person.name}</a> : person.name}</h3>
-                <p>Former {person.role}</p>
+                <p>{person.alumniNote ?? `Former ${person.role}`}</p>
                 {person.alumniDestination && <p class="alumni-destination">{person.alumniDestination}</p>}
               </div>
             </li>
