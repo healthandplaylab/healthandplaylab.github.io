@@ -265,3 +265,4 @@ a.cartridge-more:hover{border-bottom-color:var(--coral)}
 .contact-card a{font-weight:700;color:var(--teal-ink);overflow-wrap:anywhere}
 .contact-card address{font-style:normal;display:flex;flex-direction:column;line-height:1.55;color:var(--muted)}
 @media(max-width:900px){.contact-cards{grid-template-columns:1fr}}
+.footer-rights{max-width:380px;text-align:right}@media (max-width:720px){.footer-rights{text-align:left}}
