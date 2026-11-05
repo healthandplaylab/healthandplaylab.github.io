@@ -52,7 +52,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 
 .controller{position:relative;height:360px;max-width:520px;width:100%;justify-self:end;background:#DCE7DF;border:2px solid var(--ink);border-radius:170px 170px 130px 130px;box-shadow:8px 8px 0 var(--ink)}
 .controller-start{position:absolute;top:14px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;font-family:"Pixelify Sans",monospace;font-size:17px;color:#1F5F57!important;text-decoration:none;padding:4px 8px;white-space:nowrap}
-.start-hint{font-family:Inter,Arial,sans-serif;font-size:12.5px;font-weight:600;color:var(--muted)}
+.start-hint{font-family:Inter,Arial,sans-serif;font-size:13.5px;font-weight:600;color:var(--muted)}
 .controller-start:hover .start-hint{color:var(--coral-ink);text-decoration:underline;text-underline-offset:3px}
 .controller-start:hover{color:var(--coral-ink)!important;text-decoration:none!important}
 .dpad{position:absolute;left:96px;top:116px;width:126px;height:126px}
@@ -83,7 +83,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 /* Project cartridges */
 .cartridges{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .cartridge{border:1px solid var(--rule);border-radius:16px 16px 4px 4px;overflow:hidden;display:flex;flex-direction:column;color:var(--ink)!important;text-decoration:none!important;background:var(--paper)}
-.cartridge-band{height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px;border-bottom:0;font-family:"IBM Plex Mono",monospace;font-size:12px;text-transform:uppercase;color:var(--teal-ink)}
+.cartridge-band{height:46px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 16px;border-bottom:0;font-family:"IBM Plex Mono",monospace;font-size:13px;text-transform:uppercase;color:var(--teal-ink)}
 .cartridge-band .area-marker{margin:0}
 .band-filled .cartridge-band{background:var(--teal-strong);color:var(--paper)}
 .band-filled .cartridge-band .area-marker{background:var(--paper);border:0}
@@ -107,13 +107,13 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .people-strip img,.people-initials{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;border:0;display:flex;align-items:center;justify-content:center;background:#D6E5DE;color:var(--teal-ink);font-weight:700;font-size:26px;box-sizing:border-box;margin-bottom:6px}
 .people-strip b{font-size:14px;line-height:1.3}
 .people-strip b a{color:var(--ink)!important;text-decoration:underline;text-decoration-color:var(--teal-strong);text-underline-offset:3px}
-.people-role{font-family:"IBM Plex Mono",monospace;font-size:11px;text-transform:uppercase;color:var(--muted-2)}
+.people-role{font-family:"IBM Plex Mono",monospace;font-size:12.5px;text-transform:uppercase;color:var(--muted-2)}
 .people-role.director{color:var(--coral-ink)}
 
 /* News cards */
 .news-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .news-card{background:var(--mint);padding:22px}
-.news-card time{display:block;font-size:12px;text-transform:uppercase;color:var(--coral-ink);margin-bottom:8px}
+.news-card time{display:block;font-size:13px;text-transform:uppercase;color:var(--coral-ink);margin-bottom:8px}
 .news-card h3{margin:0 0 8px;font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.25}
 .news-card p{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
 
@@ -190,7 +190,7 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .research-area-head{display:grid;grid-template-columns:70px minmax(0,.9fr) minmax(0,1.1fr);gap:24px;margin-bottom:30px;align-items:start}
 .research-area-mark{display:flex;flex-direction:column;gap:10px;font-family:"Pixelify Sans",monospace;font-size:16px;color:var(--coral-ink)}
 .research-area-head h2{margin:0;font-size:clamp(28px,2.7vw,38px);font-weight:700;letter-spacing:-.04em;line-height:1.1}
-.research-area-topics{margin:12px 0 0;font-size:12.5px;color:var(--teal-ink)}
+.research-area-topics{margin:12px 0 0;font-size:14px;color:var(--teal-ink)}
 .research-area-desc{margin:0;font-size:16.5px;line-height:1.65;color:var(--muted)}
 .research-area-projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .research-area-projects.single{grid-template-columns:minmax(0,1fr)}
@@ -199,9 +199,9 @@ body.v8-page,body{background:var(--frame);font-family:Inter,"Helvetica Neue",Ari
 .research-area-projects.single .cartridge-body>p{grid-column:1}
 .research-area-projects.single .cartridge-papers{grid-column:2;grid-row:1/span 3}
 .cartridge-papers{display:flex;flex-direction:column;gap:8px;margin-top:6px}
-.cartridge-papers-label{font-family:"IBM Plex Mono",monospace;font-size:12px;text-transform:uppercase;color:var(--coral-ink)}
+.cartridge-papers-label{font-family:"IBM Plex Mono",monospace;font-size:13px;text-transform:uppercase;color:var(--coral-ink)}
 .cartridge-paper{font-size:14.5px;font-weight:600;line-height:1.4}
-.cartridge-venue{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;color:var(--teal-ink)}
+.cartridge-venue{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;color:var(--teal-ink)}
 .cartridge-more{font-size:14px;font-weight:700;color:var(--teal-ink);margin-top:6px}
 @media(max-width:900px){
   .research-area-head{grid-template-columns:44px minmax(0,1fr)}
@@ -247,7 +247,7 @@ a.cartridge-more:hover{border-bottom-color:var(--coral)}
 
 /* Publication type label (journal article, conference paper, poster, ...) */
 .pub-type{display:block;width:max-content;margin-top:6px;padding:1px 6px;border:1px solid currentColor;border-radius:4px;font:500 11px/1.5 "IBM Plex Mono",monospace;letter-spacing:.02em;color:var(--teal-ink)}
-.publication-date .pub-type{margin-top:2px;font-size:11px}
+.publication-date .pub-type{margin-top:2px;font-size:12.5px}
 .booklet .publication-filters{grid-template-columns:minmax(220px,1.4fr) repeat(3,minmax(0,.8fr)) auto}
 @media(max-width:1100px){.booklet .publication-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.booklet .publication-filters .filter-search{grid-column:1/-1}.booklet .filter-reset{justify-self:start}}
 
